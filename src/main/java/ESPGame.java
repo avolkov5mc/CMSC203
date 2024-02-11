@@ -28,7 +28,7 @@ public class ESPGame {
         System.out.print("Due Date: ");
         String dueDate = keyboard.nextLine();
 
-        System.out.println("CMSC203 Assignment #1: Test your ESP skills! ");
+        System.out.println("CMSC203 Assignment #1: Test your ESP skills!");
         int roundsWon = 0;
 
         for(int i = 1; i < 12; i++){
