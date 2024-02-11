@@ -35,7 +35,7 @@ public class ESPGame {
             System.out.println("Round " + i);
             // pick a random number 1-5
             int computerChoice = (int)(Math.random()*5) + 1;
-            System.out.println("I am thinking of a number.");
+            System.out.println("I am thinking of a color.");
             System.out.println("Is it Red, Green, Blue, Orange, or Yellow?");
             System.out.println("Enter your guess: ");
             int userChoice;
