@@ -21,20 +21,20 @@ public class ESPGame {
     public static void main(String[] args){
         // Ask user for information about themselves
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Enter your name: ");
+        System.out.print("Enter your name: ");
         String name = keyboard.nextLine();
-        System.out.println("Describe yourself: ");
+        System.out.print("Describe yourself: ");
         String description = keyboard.nextLine();
-        System.out.println("Due Date: ");
+        System.out.print("Due Date: ");
         String dueDate = keyboard.nextLine();
 
         System.out.println("CMSC203 Assignment #1: Test your ESP skills!");
         int roundsWon = 0;
 
-        for(int i = 0; i < 11; i++){
+        for(int i = 1; i < 12; i++){
             System.out.println("Round " + i);
             // pick a random number 1-5
-            int computerChoice = (int) (Math.random() * 6) + 1;
+            int computerChoice = (int)(Math.random()*5) + 1;
             System.out.println("I am thinking of a number.");
             System.out.println("Is it Red, Green, Blue, Orange, or Yellow?");
             System.out.println("Enter your guess: ");
@@ -62,9 +62,10 @@ public class ESPGame {
                         userChoice = -1;
                         System.out.println("You entered an incorrect color. Is it Red, Green, Blue, Orange, or Yellow? ");
                 }
-            }while(userChoice != -1);
+            }while(userChoice == -1);
 
-            String computerColor;
+            // match the computer's choice to a color
+            String computerColor = "";
             switch(computerChoice){
                 case(1):
                     computerColor = COLOR_RED;
@@ -82,6 +83,20 @@ public class ESPGame {
                     computerColor = COLOR_YELLOW;
                     break;
             }
+
+            // if the computer and user had the same number (color) in mind
+            if(computerChoice == userChoice){
+                roundsWon++;
+            }
+
+            System.out.println("I was thinking of " + computerColor + ".");
         }
+
+        // end game and say how many rounds were won, repeat user's info from beginning
+        System.out.println("Game Over!");
+        System.out.println("You guessed " + roundsWon + " out of 11 colors correctly.");
+        System.out.println("Student Name: " + name);
+        System.out.println("User Description: " + description);
+        System.out.println("Due Date: " + dueDate);
     }
 }
