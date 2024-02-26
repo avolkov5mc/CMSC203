@@ -1,4 +1,5 @@
-package CMSC203_Assignment1;/*
+package CMSC203_Assignment1;
+/*
 * Class: CMSC203 CRN 30339
 * Instructor: Grigoriy Grinberg
 * Description: An ESP training game
