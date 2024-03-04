@@ -1,6 +1,4 @@
-package CMSC_Lab3;
-
-import java.util.ArrayList;
+package CMSC203_Lab3;
 
 public class GradeBook
 {

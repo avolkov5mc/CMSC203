@@ -1,4 +1,4 @@
-package CMSC_Lab3;
+package CMSC203_Lab3;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
